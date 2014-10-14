@@ -255,3 +255,265 @@ Started GET "/search" for 127.0.0.1 at 2014-10-10 17:16:42 +0800
   Processing by SearchController#show as HTML
 Rendered search/show.html.erb within layouts/application (95.3ms)
 Completed 200 OK in 253ms (Views: 250.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (130.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Sat, 11 Oct 2014 08:44:22 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 08:44:22 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Sat, 11 Oct 2014 08:44:23 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 08:44:23 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Sat, 11 Oct 2014 08:44:23 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 08:44:23 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Sat, 11 Oct 2014 08:44:23 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 08:44:23 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-11 16:44:23 +0800
+  Processing by SearchController#show as HTML
+Rendered search/show.html.erb within layouts/application (85.1ms)
+Completed 200 OK in 245ms (Views: 244.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (93.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Sat, 11 Oct 2014 08:48:41 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 08:48:41 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Sat, 11 Oct 2014 08:48:41 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 08:48:41 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Sat, 11 Oct 2014 08:48:41 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 08:48:41 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Sat, 11 Oct 2014 08:48:41 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 08:48:41 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-11 16:48:41 +0800
+  Processing by SearchController#show as HTML
+Rendered search/show.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 222ms (Views: 221.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2014-10-11 16:48:41 +0800
+  Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+Rendered search/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (86.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Sat, 11 Oct 2014 09:23:31 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 09:23:31 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.3ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Sat, 11 Oct 2014 09:23:32 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 09:23:32 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Sat, 11 Oct 2014 09:23:32 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 09:23:32 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Sat, 11 Oct 2014 09:23:32 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 09:23:32 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-11 17:23:32 +0800
+  Processing by SearchController#show as HTML
+Rendered search/show.html.erb within layouts/application (82.0ms)
+Completed 200 OK in 206ms (Views: 203.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2014-10-11 17:23:32 +0800
+  Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+Rendered search/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (100.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Sat, 11 Oct 2014 09:30:08 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 09:30:08 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Sat, 11 Oct 2014 09:30:08 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 09:30:08 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Sat, 11 Oct 2014 09:30:08 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 09:30:08 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Sat, 11 Oct 2014 09:30:08 UTC +00:00], ["updated_at", Sat, 11 Oct 2014 09:30:08 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-11 17:30:08 +0800
+  Processing by SearchController#show as HTML
+Rendered search/show.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 208ms (Views: 206.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2014-10-11 17:30:09 +0800
+  Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+Rendered search/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (265.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Mon, 13 Oct 2014 05:51:39 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 05:51:39 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Mon, 13 Oct 2014 05:51:39 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 05:51:39 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Mon, 13 Oct 2014 05:51:39 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 05:51:39 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Mon, 13 Oct 2014 05:51:39 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 05:51:39 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-13 13:51:39 +0800
+  Processing by SearchController#show as HTML
+Rendered search/show.html.erb within layouts/application (121.6ms)
+Completed 200 OK in 370ms (Views: 369.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2014-10-13 13:51:40 +0800
+  Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+Rendered search/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (114.8ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Mon, 13 Oct 2014 09:24:20 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 09:24:20 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Mon, 13 Oct 2014 09:24:20 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 09:24:20 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Mon, 13 Oct 2014 09:24:20 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 09:24:20 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Mon, 13 Oct 2014 09:24:20 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 09:24:20 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-13 17:24:20 +0800
+  Processing by SearchController#show as HTML
+Rendered search/show.html.erb within layouts/application (194.7ms)
+Completed 500 Internal Server Error in 340ms
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (95.8ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Mon, 13 Oct 2014 09:28:20 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 09:28:20 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Mon, 13 Oct 2014 09:28:20 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 09:28:20 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Mon, 13 Oct 2014 09:28:20 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 09:28:20 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Mon, 13 Oct 2014 09:28:20 UTC +00:00], ["updated_at", Mon, 13 Oct 2014 09:28:20 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-13 17:28:20 +0800
+  Processing by SearchController#show as HTML
+Completed 500 Internal Server Error in 4ms
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (123.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Tue, 14 Oct 2014 01:18:35 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:18:35 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Tue, 14 Oct 2014 01:18:36 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:18:36 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Tue, 14 Oct 2014 01:18:36 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:18:36 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Tue, 14 Oct 2014 01:18:36 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:18:36 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-14 09:18:36 +0800
+  Processing by SearchController#show as HTML
+Rendered search/show.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 242ms (Views: 239.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2014-10-14 09:18:36 +0800
+  Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[36mMessage Load (0.9ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE (content LINK '%I am%')[0m
+SQLite3::SQLException: near "LINK": syntax error: SELECT "messages".* FROM "messages"  WHERE (content LINK '%I am%')
+Rendered search/show.html.erb within layouts/application (20.2ms)
+Completed 500 Internal Server Error in 28ms
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (84.8ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Tue, 14 Oct 2014 01:20:32 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:20:32 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Tue, 14 Oct 2014 01:20:32 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:20:32 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Tue, 14 Oct 2014 01:20:32 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:20:32 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Tue, 14 Oct 2014 01:20:32 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:20:32 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-14 09:20:32 +0800
+  Processing by SearchController#show as HTML
+Rendered search/show.html.erb within layouts/application (70.6ms)
+Completed 200 OK in 182ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2014-10-14 09:20:32 +0800
+  Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[36mMessage Load (0.9ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE (content LINK '%I am%')[0m
+SQLite3::SQLException: near "LINK": syntax error: SELECT "messages".* FROM "messages"  WHERE (content LINK '%I am%')
+Rendered search/show.html.erb within layouts/application (20.6ms)
+Completed 500 Internal Server Error in 25ms
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (86.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Tue, 14 Oct 2014 01:22:41 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:22:41 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Tue, 14 Oct 2014 01:22:41 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:22:41 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Tue, 14 Oct 2014 01:22:41 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:22:41 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Tue, 14 Oct 2014 01:22:41 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:22:41 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-14 09:22:41 +0800
+  Processing by SearchController#show as HTML
+Rendered search/show.html.erb within layouts/application (81.1ms)
+Completed 200 OK in 206ms (Views: 204.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2014-10-14 09:22:42 +0800
+  Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[36mMessage Load (0.5ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered search/show.html.erb within layouts/application (299.6ms)
+Completed 500 Internal Server Error in 303ms
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (72.0ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Tue, 14 Oct 2014 01:24:42 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:24:42 UTC +00:00], ["username", "testuser"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am making dinner"], ["created_at", Tue, 14 Oct 2014 01:24:42 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:24:42 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["content", "I just woke up"], ["created_at", Tue, 14 Oct 2014 01:24:42 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:24:42 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "messages" ("content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["content", "I am going to work"], ["created_at", Tue, 14 Oct 2014 01:24:42 UTC +00:00], ["updated_at", Tue, 14 Oct 2014 01:24:42 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/search" for 127.0.0.1 at 2014-10-14 09:24:42 +0800
+  Processing by SearchController#show as HTML
+Rendered search/show.html.erb within layouts/application (79.5ms)
+Completed 200 OK in 192ms (Views: 190.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?query=I+am" for 127.0.0.1 at 2014-10-14 09:24:43 +0800
+  Processing by SearchController#show as HTML
+  Parameters: {"query"=>"I am"}
+  [1m[36mMessage Load (0.5ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE (content LIKE '%I am%')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered search/show.html.erb within layouts/application (110.0ms)
+Completed 200 OK in 115ms (Views: 113.5ms | ActiveRecord: 0.9ms)

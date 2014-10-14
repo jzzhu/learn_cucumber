@@ -55,6 +55,8 @@ Squeaker::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-  resources :users
+  resources :users do
+    resources :messages
+  end
   resource :search, :only => :show, :controller => :search
 end
