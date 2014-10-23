@@ -1,0 +1,38 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1413793695.5869052:@value{I"
+class:EFI"BundledAsset;
+FI"id;
+F"%9a34403d2f00752ea0d4b458ed8c9cacI"logical_path;
+FI"application.css;
+TI"pathname;
+FI"1$root/app/assets/stylesheets/application.css;
+FI"content_type;
+FI"text/css;
+FI"
+mtime;
+FI"2014-10-01T16:31:18+08:00;
+FI"	body;
+FI":/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+*/
+;
+FI"asset_paths;
+F[I"1$root/app/assets/stylesheets/application.css;
+FI"dependency_paths;
+F[{I"	path;
+FI"1$root/app/assets/stylesheets/application.css;
+FI"
+mtime;
+FIu:	Time(¤€µ/"}
+:@_zoneI"CST;
+T:nano_numi”:nano_deni:submicro"@@:offseti€pI"hexdigest;
+F"%34d98bb4944b2fc0ecc9c158d50899ea{I"	path;
+FI"!$root/app/assets/stylesheets;
+FI"
+mtime;
+FIu;(¤€µ/"}
+;I"CST;
+T;i”;i;"@@;i€pI"hexdigest;
+F"%db711ee56c174ed077a50a879c144330I"_version;
+F"%5397ace057ac8dcf6c38e89335593daf
